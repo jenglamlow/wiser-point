@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/wiser-point/static/css/main.b874ddfd.chunk.css",
-    "main.js": "/wiser-point/static/js/main.4b116a89.chunk.js",
-    "main.js.map": "/wiser-point/static/js/main.4b116a89.chunk.js.map",
+    "main.css": "/wiser-point/static/css/main.97062ad5.chunk.css",
+    "main.js": "/wiser-point/static/js/main.33e5577f.chunk.js",
+    "main.js.map": "/wiser-point/static/js/main.33e5577f.chunk.js.map",
     "runtime-main.js": "/wiser-point/static/js/runtime-main.c7904ade.js",
     "runtime-main.js.map": "/wiser-point/static/js/runtime-main.c7904ade.js.map",
     "static/css/2.c580e4b9.chunk.css": "/wiser-point/static/css/2.c580e4b9.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.87c9e40e.chunk.js.map": "/wiser-point/static/js/3.87c9e40e.chunk.js.map",
     "index.html": "/wiser-point/index.html",
     "static/css/2.c580e4b9.chunk.css.map": "/wiser-point/static/css/2.c580e4b9.chunk.css.map",
-    "static/css/main.b874ddfd.chunk.css.map": "/wiser-point/static/css/main.b874ddfd.chunk.css.map",
+    "static/css/main.97062ad5.chunk.css.map": "/wiser-point/static/css/main.97062ad5.chunk.css.map",
     "static/js/2.eb5bb218.chunk.js.LICENSE.txt": "/wiser-point/static/js/2.eb5bb218.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c7904ade.js",
     "static/css/2.c580e4b9.chunk.css",
     "static/js/2.eb5bb218.chunk.js",
-    "static/css/main.b874ddfd.chunk.css",
-    "static/js/main.4b116a89.chunk.js"
+    "static/css/main.97062ad5.chunk.css",
+    "static/js/main.33e5577f.chunk.js"
   ]
 }
