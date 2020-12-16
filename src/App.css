@@ -7,13 +7,41 @@
 }
 
 .score-table {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .score-table tr {
   text-align: center;
 }
 
+.input-table tr td{
+  text-align: center;
+  vertical-align: middle;
+}
+
 .input-table{
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.player-num-container {
+  display: flex;
+  align-items: center;
+}
+
+.player-num-label {
+  padding-right: 1rem;
+}
+
+.strike-out-label {
+  text-decoration: line-through;
+}
+
+.input-table-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reset-container {
+  margin-left: 1rem;
 }

@@ -57,10 +57,10 @@ const ThreePoint = ({ data }) => {
 }
 
 const AttackScore = ({ data }) => {
-  const { red, white } = data
+  const { red, white, numberOfPlayer } = data
 
-  const redScore = 21 - (white.contesting * 3 + white.yellow * 2 + white.red * 1)
-  const whiteScore = 21 - (red.contesting * 3 + red.yellow * 2 + red.red * 1)
+  const redScore = numberOfPlayer * 3 - (white.contesting * 3 + white.yellow * 2 + white.red * 1)
+  const whiteScore = numberOfPlayer * 3 - (red.contesting * 3 + red.yellow * 2 + red.red * 1)
 
   const winner = getResult(redScore, whiteScore)
 
@@ -75,10 +75,10 @@ const AttackScore = ({ data }) => {
 }
 
 const AttackDefense = ({ data }) => {
-  const { red, white } = data
+  const { red, white, numberOfPlayer } = data
 
-  const redScore = 21 - (white.contesting * 3 + white.yellow * 2 + white.red * 1) + (red.contesting * 3 + red.yellow * 2 + red.red * 1)
-  const whiteScore = 21 - (red.contesting * 3 + red.yellow * 2 + red.red * 1) + (white.contesting * 3 + white.yellow * 2 + white.red * 1)
+  const redScore = numberOfPlayer * 3 - (white.contesting * 3 + white.yellow * 2 + white.red * 1) + (red.contesting * 3 + red.yellow * 2 + red.red * 1)
+  const whiteScore = numberOfPlayer * 3 - (red.contesting * 3 + red.yellow * 2 + red.red * 1) + (white.contesting * 3 + white.yellow * 2 + white.red * 1)
 
   const winner = getResult(redScore, whiteScore)
 

@@ -2,8 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import InputTable from './InputTable'
 import Score from './Score'
+import PlayerNumber from './PlayerNumber'
 
-let initialData = {
+const initialData = {
+  numberOfPlayer: 7,
   red: {
     contesting: 7,
     yellow: 0,
@@ -17,15 +19,25 @@ let initialData = {
 }
 
 function App() {
-  const [data, setData] = useState(initialData)
+  const [data, setData] = useState(JSON.parse(JSON.stringify(initialData)))
 
   const handleChange = (data) => {
     setData(data)
   }
 
+  const handlePlayerNumChange = (number) => {
+    // Reset Data
+    let newData = JSON.parse(JSON.stringify(initialData));
+    newData.numberOfPlayer = number
+    newData.red.contesting = number
+    newData.white.contesting = number
+    setData(newData)
+  }
+
   return (
     <div className="App">
       <h1 className="title is-1">Wiser Point</h1>
+      <PlayerNumber onChange={handlePlayerNumChange}></PlayerNumber>
       <InputTable data={data} onChange={handleChange}></InputTable>
       <Score data={data}></Score>
     </div>
