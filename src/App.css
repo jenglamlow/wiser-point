@@ -1,0 +1,19 @@
+.App {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score-table {
+  margin-top: 3rem;
+}
+
+.score-table tr {
+  text-align: center;
+}
+
+.input-table{
+  margin-top: 3rem;
+}
