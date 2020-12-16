@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/wiser-point/static/css/main.2ca33fba.chunk.css",
-    "main.js": "/wiser-point/static/js/main.d0d2ccf7.chunk.js",
-    "main.js.map": "/wiser-point/static/js/main.d0d2ccf7.chunk.js.map",
-    "runtime-main.js": "/wiser-point/static/js/runtime-main.665a5cad.js",
-    "runtime-main.js.map": "/wiser-point/static/js/runtime-main.665a5cad.js.map",
+    "main.css": "/wiser-point/static/css/main.71e3ceb8.chunk.css",
+    "main.js": "/wiser-point/static/js/main.2506ae4a.chunk.js",
+    "main.js.map": "/wiser-point/static/js/main.2506ae4a.chunk.js.map",
+    "runtime-main.js": "/wiser-point/static/js/runtime-main.c7904ade.js",
+    "runtime-main.js.map": "/wiser-point/static/js/runtime-main.c7904ade.js.map",
     "static/css/2.c580e4b9.chunk.css": "/wiser-point/static/css/2.c580e4b9.chunk.css",
-    "static/js/2.e3f3bd68.chunk.js": "/wiser-point/static/js/2.e3f3bd68.chunk.js",
-    "static/js/2.e3f3bd68.chunk.js.map": "/wiser-point/static/js/2.e3f3bd68.chunk.js.map",
-    "static/js/3.4c47e3c7.chunk.js": "/wiser-point/static/js/3.4c47e3c7.chunk.js",
-    "static/js/3.4c47e3c7.chunk.js.map": "/wiser-point/static/js/3.4c47e3c7.chunk.js.map",
+    "static/js/2.eb5bb218.chunk.js": "/wiser-point/static/js/2.eb5bb218.chunk.js",
+    "static/js/2.eb5bb218.chunk.js.map": "/wiser-point/static/js/2.eb5bb218.chunk.js.map",
+    "static/js/3.87c9e40e.chunk.js": "/wiser-point/static/js/3.87c9e40e.chunk.js",
+    "static/js/3.87c9e40e.chunk.js.map": "/wiser-point/static/js/3.87c9e40e.chunk.js.map",
     "index.html": "/wiser-point/index.html",
     "static/css/2.c580e4b9.chunk.css.map": "/wiser-point/static/css/2.c580e4b9.chunk.css.map",
-    "static/css/main.2ca33fba.chunk.css.map": "/wiser-point/static/css/main.2ca33fba.chunk.css.map",
-    "static/js/2.e3f3bd68.chunk.js.LICENSE.txt": "/wiser-point/static/js/2.e3f3bd68.chunk.js.LICENSE.txt"
+    "static/css/main.71e3ceb8.chunk.css.map": "/wiser-point/static/css/main.71e3ceb8.chunk.css.map",
+    "static/js/2.eb5bb218.chunk.js.LICENSE.txt": "/wiser-point/static/js/2.eb5bb218.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.665a5cad.js",
+    "static/js/runtime-main.c7904ade.js",
     "static/css/2.c580e4b9.chunk.css",
-    "static/js/2.e3f3bd68.chunk.js",
-    "static/css/main.2ca33fba.chunk.css",
-    "static/js/main.d0d2ccf7.chunk.js"
+    "static/js/2.eb5bb218.chunk.js",
+    "static/css/main.71e3ceb8.chunk.css",
+    "static/js/main.2506ae4a.chunk.js"
   ]
 }
