@@ -21,10 +21,13 @@ const Score = ({ data }) => {
 }
 
 const WWSC = ({ data }) => {
-  const { red, white } = data
+  const { red, white, numberOfPlayer } = data
 
-  const redScore = red.contesting * 5 + red.yellow * 2 + red.red * 1
-  const whiteScore = white.contesting * 5 + white.yellow * 2 + white.red * 1
+  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
+  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+
+  const redScore = redContesting * 5 + red.yellow * 2 + red.red * 1
+  const whiteScore = whiteContesting * 5 + white.yellow * 2 + white.red * 1
 
   const winner = getResult(redScore, whiteScore)
 
@@ -39,10 +42,13 @@ const WWSC = ({ data }) => {
 }
 
 const ThreePoint = ({ data }) => {
-  const { red, white } = data
+  const { red, white, numberOfPlayer } = data
 
-  const redScore = red.contesting * 3 + red.yellow * 2 + red.red * 1
-  const whiteScore = white.contesting * 3 + white.yellow * 2 + white.red * 1
+  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
+  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+
+  const redScore = redContesting * 3 + red.yellow * 2 + red.red * 1
+  const whiteScore = whiteContesting * 3 + white.yellow * 2 + white.red * 1
 
   const winner = getResult(redScore, whiteScore)
 
@@ -59,14 +65,17 @@ const ThreePoint = ({ data }) => {
 const AttackScore = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redScore = numberOfPlayer * 3 - (white.contesting * 3 + white.yellow * 2 + white.red * 1)
-  const whiteScore = numberOfPlayer * 3 - (red.contesting * 3 + red.yellow * 2 + red.red * 1)
+  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
+  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+
+  const redScore = numberOfPlayer * 3 - (whiteContesting * 3 + white.yellow * 2 + white.red * 1)
+  const whiteScore = numberOfPlayer * 3 - (redContesting * 3 + red.yellow * 2 + red.red * 1)
 
   const winner = getResult(redScore, whiteScore)
 
   return (
     <tr>
-      <td>Attack Score</td>
+      <td className="has-background-black has-text-white">Attack</td>
       <td className={winner === 'red' ? 'has-background-primary' : null}>{redScore}</td>
       <td>vs</td>
       <td className={winner === 'white' ? 'has-background-primary' : null}>{whiteScore}</td>
@@ -77,8 +86,11 @@ const AttackScore = ({ data }) => {
 const AttackDefense = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redScore = numberOfPlayer * 3 - (white.contesting * 3 + white.yellow * 2 + white.red * 1) + (red.contesting * 3 + red.yellow * 2 + red.red * 1)
-  const whiteScore = numberOfPlayer * 3 - (red.contesting * 3 + red.yellow * 2 + red.red * 1) + (white.contesting * 3 + white.yellow * 2 + white.red * 1)
+  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
+  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+
+  const redScore = numberOfPlayer * 3 - (whiteContesting * 3 + white.yellow * 2 + white.red * 1) + (redContesting * 3 + red.yellow * 2 + red.red * 1)
+  const whiteScore = numberOfPlayer * 3 - (redContesting * 3 + red.yellow * 2 + red.red * 1) + (whiteContesting * 3 + white.yellow * 2 + white.red * 1)
 
   const winner = getResult(redScore, whiteScore)
 

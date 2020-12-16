@@ -7,14 +7,14 @@ import PlayerNumber from './PlayerNumber'
 const initialData = {
   numberOfPlayer: 7,
   red: {
-    contesting: 7,
     yellow: 0,
-    red: 0
+    red: 0,
+    eliminated: 0
   },
   white: {
-    contesting: 7,
     yellow: 0,
-    red: 0
+    red: 0,
+    eliminated: 0
   }
 }
 
@@ -29,8 +29,6 @@ function App() {
     // Reset Data
     let newData = JSON.parse(JSON.stringify(initialData));
     newData.numberOfPlayer = number
-    newData.red.contesting = number
-    newData.white.contesting = number
     setData(newData)
   }
 

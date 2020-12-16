@@ -3,11 +3,11 @@
 const InputTable = ({ data, onChange }) => {
   const { red, white, numberOfPlayer } = data;
 
-  const redStrikeOut = numberOfPlayer - red.contesting - red.yellow - red.red;
-  const whiteStrikeOut = numberOfPlayer - white.contesting - white.yellow - white.red;
+  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
+  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
 
-  const redPlayerMismatch = red.contesting + red.yellow + red.red > numberOfPlayer
-  const whitePlayerMismatch = white.contesting + white.yellow + white.red > numberOfPlayer
+  const redPlayerMismatch = red.eliminated + red.yellow + red.red > numberOfPlayer
+  const whitePlayerMismatch = white.eliminated + white.yellow + white.red > numberOfPlayer
   const hasError = redPlayerMismatch | whitePlayerMismatch
 
   const handleChange = (name, value) => {
@@ -19,7 +19,7 @@ const InputTable = ({ data, onChange }) => {
 
   return (
     <div className="input-table-container">
-      {hasError ? <div className="has-text-danger">Error: Mismatch Player Number detected</div> : null}
+      <div className="error-container has-text-danger">{hasError ? "Error: Mismatch Player Number detected" : ""}</div>
       <table className="table input-table">
         <thead>
           <tr>
@@ -31,8 +31,8 @@ const InputTable = ({ data, onChange }) => {
         <tbody>
           <tr>
             <td>Contesting Ball</td>
-            <td><Select error={redPlayerMismatch} number={numberOfPlayer + 1} value={red.contesting} onChange={(data) => handleChange("red-contesting", data)}></Select></td>
-            <td><Select error={whitePlayerMismatch} number={numberOfPlayer + 1} value={white.contesting} onChange={(data) => handleChange("white-contesting", data)}></Select></td>
+            <td>{redContesting}</td>
+            <td>{whiteContesting}</td>
           </tr>
           <tr>
             <td className="has-background-warning">Yellow Flag</td>
@@ -46,8 +46,8 @@ const InputTable = ({ data, onChange }) => {
           </tr>
           <tr>
             <td className="strike-out-label">Strike Out</td>
-            <td>{redStrikeOut}</td>
-            <td>{whiteStrikeOut}</td>
+            <td><Select error={redPlayerMismatch} number={numberOfPlayer + 1} value={red.eliminated} onChange={(data) => handleChange("red-eliminated", data)}></Select></td>
+            <td><Select error={whitePlayerMismatch} number={numberOfPlayer + 1} value={white.eliminated} onChange={(data) => handleChange("white-eliminated", data)}></Select></td>
           </tr>
         </tbody>
       </table>
