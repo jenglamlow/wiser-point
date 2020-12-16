@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wiser-point/static/css/main.cbd1c359.chunk.css",
-    "main.js": "/wiser-point/static/js/main.4a5e697e.chunk.js",
-    "main.js.map": "/wiser-point/static/js/main.4a5e697e.chunk.js.map",
+    "main.js": "/wiser-point/static/js/main.d0d2ccf7.chunk.js",
+    "main.js.map": "/wiser-point/static/js/main.d0d2ccf7.chunk.js.map",
     "runtime-main.js": "/wiser-point/static/js/runtime-main.665a5cad.js",
     "runtime-main.js.map": "/wiser-point/static/js/runtime-main.665a5cad.js.map",
     "static/css/2.c580e4b9.chunk.css": "/wiser-point/static/css/2.c580e4b9.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.c580e4b9.chunk.css",
     "static/js/2.e3f3bd68.chunk.js",
     "static/css/main.cbd1c359.chunk.css",
-    "static/js/main.4a5e697e.chunk.js"
+    "static/js/main.d0d2ccf7.chunk.js"
   ]
 }
