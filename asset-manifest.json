@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wiser-point/static/css/main.96d38004.chunk.css",
+    "main.css": "/wiser-point/static/css/main.cbd1c359.chunk.css",
     "main.js": "/wiser-point/static/js/main.4a5e697e.chunk.js",
     "main.js.map": "/wiser-point/static/js/main.4a5e697e.chunk.js.map",
     "runtime-main.js": "/wiser-point/static/js/runtime-main.665a5cad.js",
@@ -12,14 +12,14 @@
     "static/js/3.4c47e3c7.chunk.js.map": "/wiser-point/static/js/3.4c47e3c7.chunk.js.map",
     "index.html": "/wiser-point/index.html",
     "static/css/2.c580e4b9.chunk.css.map": "/wiser-point/static/css/2.c580e4b9.chunk.css.map",
-    "static/css/main.96d38004.chunk.css.map": "/wiser-point/static/css/main.96d38004.chunk.css.map",
+    "static/css/main.cbd1c359.chunk.css.map": "/wiser-point/static/css/main.cbd1c359.chunk.css.map",
     "static/js/2.e3f3bd68.chunk.js.LICENSE.txt": "/wiser-point/static/js/2.e3f3bd68.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.665a5cad.js",
     "static/css/2.c580e4b9.chunk.css",
     "static/js/2.e3f3bd68.chunk.js",
-    "static/css/main.96d38004.chunk.css",
+    "static/css/main.cbd1c359.chunk.css",
     "static/js/main.4a5e697e.chunk.js"
   ]
 }
