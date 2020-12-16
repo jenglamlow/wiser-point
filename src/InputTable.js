@@ -18,18 +18,18 @@ const InputTable = ({ data, onChange }) => {
       <tbody>
         <tr>
           <td>Contesting Ball</td>
-          <td><input name="red-contesting" className="input" type="number" value={data.red.contesting} min="0" max="7" onChange={handleChange}></input></td>
-          <td><input name="white-contesting" className="input" type="number" value={data.white.contesting} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="red-contesting" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.red.contesting} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="white-contesting" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.white.contesting} min="0" max="7" onChange={handleChange}></input></td>
         </tr>
         <tr>
           <td className="has-background-warning">Yellow Flag</td>
-          <td><input name="red-yellow" className="input" type="number" value={data.red.yellow} min="0" max="7" onChange={handleChange}></input></td>
-          <td><input name="white-yellow" className="input" type="number" value={data.white.yellow} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="red-yellow" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.red.yellow} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="white-yellow" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.white.yellow} min="0" max="7" onChange={handleChange}></input></td>
         </tr>
         <tr>
           <td className="has-background-danger">Red Flag</td>
-          <td><input name="red-red" className="input" type="number" value={data.red.red} min="0" max="7" onChange={handleChange}></input></td>
-          <td><input name="white-red" className="input" type="number" value={data.white.red} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="red-red" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.red.red} min="0" max="7" onChange={handleChange}></input></td>
+          <td><input name="white-red" className="input" type="number" inputmode="numeric" pattern="[0-9]*" value={data.white.red} min="0" max="7" onChange={handleChange}></input></td>
         </tr>
       </tbody>
     </table>
