@@ -26,23 +26,23 @@ const InputTable = ({ data, onChange }) => {
         <tbody>
           <tr>
             <td>Contesting Ball</td>
-            <td>{redContesting}</td>
-            <td>{whiteContesting}</td>
+            <td className="is-size-3">{redContesting}</td>
+            <td className="is-size-3">{whiteContesting}</td>
           </tr>
           <tr>
             <td className="has-background-warning">Yellow Flag</td>
-            <td><InputNumeric number={red.yellow} contesting={getContesting(numberOfPlayer, red)} onChange={(value) => handleChange("red-yellow", value)} /></td>
-            <td><InputNumeric number={white.yellow} contesting={getContesting(numberOfPlayer, white)} onChange={(value) => handleChange("white-yellow", value)} /></td>
+            <td><InputNumeric number={red.yellow} contesting={redContesting} onChange={(value) => handleChange("red-yellow", value)} /></td>
+            <td><InputNumeric number={white.yellow} contesting={whiteContesting} onChange={(value) => handleChange("white-yellow", value)} /></td>
           </tr>
           <tr>
             <td className="has-background-danger">Red Flag</td>
-            <td><InputNumeric number={red.red} contesting={getContesting(numberOfPlayer, red)} onChange={(value) => handleChange("red-red", value)} /></td>
-            <td><InputNumeric number={white.red} contesting={getContesting(numberOfPlayer, white)} onChange={(value) => handleChange("white-red", value)} /></td>
+            <td><InputNumeric number={red.red} contesting={redContesting} onChange={(value) => handleChange("red-red", value)} /></td>
+            <td><InputNumeric number={white.red} contesting={whiteContesting} onChange={(value) => handleChange("white-red", value)} /></td>
           </tr>
           <tr>
             <td className="strike-out-label">Strike Out</td>
-            <td><InputNumeric number={red.eliminated} contesting={getContesting(numberOfPlayer, red)} onChange={(value) => handleChange("red-eliminated", value)} /></td>
-            <td><InputNumeric number={white.eliminated} contesting={getContesting(numberOfPlayer, white)} onChange={(value) => handleChange("white-eliminated", value)} /></td>
+            <td><InputNumeric number={red.eliminated} contesting={redContesting} onChange={(value) => handleChange("red-eliminated", value)} /></td>
+            <td><InputNumeric number={white.eliminated} contesting={whiteContesting} onChange={(value) => handleChange("white-eliminated", value)} /></td>
           </tr>
         </tbody>
       </table>
