@@ -1,3 +1,4 @@
+import { getContesting } from './util'
 
 const Score = ({ data }) => {
   return (
@@ -23,8 +24,8 @@ const Score = ({ data }) => {
 const WWSC = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
-  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+  const redContesting = getContesting(numberOfPlayer, data.red);
+  const whiteContesting = getContesting(numberOfPlayer, data.white);
 
   const redScore = redContesting * 5 + red.yellow * 2 + red.red * 1
   const whiteScore = whiteContesting * 5 + white.yellow * 2 + white.red * 1
@@ -44,8 +45,8 @@ const WWSC = ({ data }) => {
 const ThreePoint = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
-  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+  const redContesting = getContesting(numberOfPlayer, data.red);
+  const whiteContesting = getContesting(numberOfPlayer, data.white);
 
   const redScore = redContesting * 3 + red.yellow * 2 + red.red * 1
   const whiteScore = whiteContesting * 3 + white.yellow * 2 + white.red * 1
@@ -65,8 +66,8 @@ const ThreePoint = ({ data }) => {
 const AttackScore = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
-  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+  const redContesting = getContesting(numberOfPlayer, data.red);
+  const whiteContesting = getContesting(numberOfPlayer, data.white);
 
   const redScore = numberOfPlayer * 3 - (whiteContesting * 3 + white.yellow * 2 + white.red * 1)
   const whiteScore = numberOfPlayer * 3 - (redContesting * 3 + red.yellow * 2 + red.red * 1)
@@ -86,8 +87,8 @@ const AttackScore = ({ data }) => {
 const AttackDefense = ({ data }) => {
   const { red, white, numberOfPlayer } = data
 
-  const redContesting = numberOfPlayer - red.yellow - red.red - red.eliminated;
-  const whiteContesting = numberOfPlayer - white.yellow - white.red - white.eliminated;
+  const redContesting = getContesting(numberOfPlayer, data.red);
+  const whiteContesting = getContesting(numberOfPlayer, data.white);
 
   const redScore = numberOfPlayer * 3 - (whiteContesting * 3 + white.yellow * 2 + white.red * 1) + (redContesting * 3 + red.yellow * 2 + red.red * 1)
   const whiteScore = numberOfPlayer * 3 - (redContesting * 3 + red.yellow * 2 + red.red * 1) + (whiteContesting * 3 + white.yellow * 2 + white.red * 1)
