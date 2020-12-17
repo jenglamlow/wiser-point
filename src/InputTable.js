@@ -75,4 +75,16 @@ const Select = ({ error, number, value, onChange }) => {
   )
 }
 
+const InputNumeric = () => {
+  return (
+    <div className="is-flex is-flex-direction-row is-justify-content-center is-align-items-center">
+      <div>1</div>
+      <div className="is-flex is-flex-direction-column">
+        <button>+</button>
+        <button>-</button>
+      </div>
+    </div>
+  )
+}
+
 export default InputTable;

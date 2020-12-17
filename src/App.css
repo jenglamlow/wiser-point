@@ -14,23 +14,14 @@
   text-align: center;
 }
 
-.input-table tr td{
-  text-align: center;
-  vertical-align: middle;
-  height: 60px;
-}
-
-.input-table{
+.input-table {
   margin-top: 1rem;
 }
 
-.player-num-container {
-  display: flex;
-  align-items: center;
-}
-
-.player-num-label {
-  padding-right: 1rem;
+.input-table tr td {
+  text-align: center;
+  vertical-align: middle;
+  height: 60px;
 }
 
 .strike-out-label {
@@ -47,6 +38,3 @@
   height: 24px;
 }
 
-.reset-container {
-  margin-left: 1rem;
-}

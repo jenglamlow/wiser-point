@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
+const numOfPlayer = [...Array(7)]
+
 const PlayerNumber = ({ onChange }) => {
   const [num, setNum] = useState(7)
-  const numOfPlayer = [...Array(7)]
 
   const handleChange = (evt) => {
     const numberOfPlayer = parseInt(evt.target.value, 10)
@@ -15,8 +16,8 @@ const PlayerNumber = ({ onChange }) => {
   }
 
   return (
-    <div className="player-num-container">
-      <div className="player-num-label">Number of Player</div>
+    <div className="is-flex is-align-items-center">
+      <div className="pr-2">Number of Player</div>
       <div className="control">
         <div className="select">
           <select onChange={handleChange} defaultValue={7}>
@@ -24,7 +25,7 @@ const PlayerNumber = ({ onChange }) => {
           </select>
         </div>
       </div>
-      <div className="buttons reset-container">
+      <div className="buttons ml-2">
         <button className="button is-primary" onClick={handleReset}>Reset</button>
       </div>
     </div >
